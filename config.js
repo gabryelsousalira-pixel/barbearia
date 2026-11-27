@@ -15,80 +15,77 @@ const config = {
     branco: "#FFFFFF"
   },
 
-  // IMAGENS PRINCIPAIS
   fotos: {
-    hero: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&auto=format&fit=crop&q=85",
-    sobre: "https://images.unsplash.com/photo- barber-example"
+    hero: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&q=85",
+    sobre: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=1000&q=85"
   },
 
   horarioInicio: 9,
   horarioFim: 20,
 
-  // SERVIÇOS
   servicos: [
     {
       nome: "Corte masculino",
       preco: "R$ 40",
       desc: "Corte na tesoura ou máquina, do jeito que combina com você.",
-      foto: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800"
+      foto: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=85"
     },
     {
       nome: "Barba",
       preco: "R$ 30",
       desc: "Barba alinhada com toalha quente e acabamento na navalha.",
-      foto: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800"
+      foto: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=85"
     },
     {
       nome: "Corte + barba",
       preco: "R$ 60",
       desc: "O combo completo para sair renovado da cadeira.",
-      foto: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800"
+      foto: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=85"
     },
     {
       nome: "Degradê",
       preco: "R$ 45",
       desc: "Degradê preciso, com transição suave e acabamento limpo.",
-      foto: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800"
+      foto: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=85"
     },
     {
       nome: "Sobrancelha",
       preco: "R$ 15",
       desc: "Design discreto que realça o olhar sem exageros.",
-      foto: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800"
+      foto: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=800&q=85"
     },
     {
       nome: "Pigmentação",
       preco: "R$ 25",
       desc: "Preenchimento natural para realçar falhas e contornos.",
-      foto: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800"
+      foto: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=85"
     }
   ],
 
-  // GALERIA
   galeria: [
     {
       titulo: "Degradê",
-      foto: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=900"
+      foto: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=900&q=85"
     },
     {
       titulo: "Corte social",
-      foto: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900"
+      foto: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=85"
     },
     {
       titulo: "Corte moderno",
-      foto: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900"
+      foto: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=85"
     },
     {
       titulo: "Barba alinhada",
-      foto: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=900"
+      foto: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=900&q=85"
     },
     {
       titulo: "Transformação de visual",
-      foto: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900"
+      foto: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=85"
     },
     {
       titulo: "Ambiente da barbearia",
-      foto: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=900"
+      foto: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=900&q=85"
     }
   ],
 
