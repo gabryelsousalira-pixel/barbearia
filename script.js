@@ -1,107 +1,143 @@
 
-/* ===== CONFIGURAÇÃO BARBER CLUB ===== */
-const config = {
-  nomeBarbearia: "BARBER CLUB",
-  logo: "",
-  whatsappNumber: "5511999999999",
-  instagram: "https://instagram.com/",
-  endereco: "Endereço demonstrativo",
-  horario: "Segunda a sábado, das 9h às 20h",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Endereco+demonstrativo",
+(function () {
+  const c = config;
+  const $ = s => document.querySelector(s);
+  const $$ = s => document.querySelectorAll(s);
+  const r = document.documentElement.style;
 
-  cores: {
-    marinho: "#101C2C",
-    prata: "#AEB8C4",
-    cinza: "#293747",
-    branco: "#FFFFFF"
-  },
+  r.setProperty('--marinho', c.cores.marinho);
+  r.setProperty('--prata', c.cores.prata);
+  r.setProperty('--cinza', c.cores.cinza);
+  r.setProperty('--branco', c.cores.branco);
 
-  fotos: {
-    hero: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600",
-    sobre: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=900"
-  },
+  document.title = c.nomeBarbearia;
 
-  horarioInicio: 9,
-  horarioFim: 20,
+  const logo = $('.logo');
+  if (logo) {
+    logo.textContent = c.nomeBarbearia;
+  }
 
-  servicos: [
-    {
-      nome: "Corte masculino",
-      preco: "R$ 40",
-      desc: "Corte na tesoura ou máquina, do jeito que combina com você.",
-      foto: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700"
-    },
-    {
-      nome: "Barba",
-      preco: "R$ 30",
-      desc: "Barba alinhada com toalha quente e acabamento na navalha.",
-      foto: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=700"
-    },
-    {
-      nome: "Corte + barba",
-      preco: "R$ 60",
-      desc: "O combo completo para sair renovado da cadeira.",
-      foto: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=700"
-    },
-    {
-      nome: "Degradê",
-      preco: "R$ 45",
-      desc: "Degradê preciso, com transição suave e acabamento limpo.",
-      foto: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700"
-    },
-    {
-      nome: "Sobrancelha",
-      preco: "R$ 15",
-      desc: "Design discreto que realça o olhar sem exageros.",
-      foto: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=700"
-    },
-    {
-      nome: "Pigmentação",
-      preco: "R$ 25",
-      desc: "Preenchimento natural para realçar falhas e contornos.",
-      foto: "https://images.unsplash.com/photo-1593702288056-f5f4f7c7a5f0?w=700"
-    }
-  ],
+  const bg = (el, url) => {
+    if (el && url) el.style.backgroundImage = `url("${url}")`;
+  };
 
-  galeria: [
-    {
-      titulo: "Degradê",
-      foto: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700"
-    },
-    {
-      titulo: "Corte social",
-      foto: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700"
-    },
-    {
-      titulo: "Corte moderno",
-      foto: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=700"
-    },
-    {
-      titulo: "Barba alinhada",
-      foto: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=700"
-    },
-    {
-      titulo: "Transformação de visual",
-      foto: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=700"
-    },
-    {
-      titulo: "Ambiente da barbearia",
-      foto: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=700"
-    }
-  ],
+  bg($('#heroImg'), c.fotos.hero);
+  bg($('#sobreImg'), c.fotos.sobre);
 
-  avaliacoes: [
-    {
-      nome: "Cliente exemplo 1",
-      texto: "Atendimento excelente e ambiente muito confortável. Saí satisfeito com o resultado."
-    },
-    {
-      nome: "Cliente exemplo 2",
-      texto: "Pontualidade e capricho nos detalhes. O agendamento pelo WhatsApp é muito prático."
-    },
-    {
-      nome: "Cliente exemplo 3",
-      texto: "Profissionais atenciosos que entendem o estilo que você procura."
-    }
-  ]
-};
+  const telefone = c.whatsappNumber;
+  const whatsapp = texto =>
+    `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+
+  $$('.nomeBarbearia').forEach(el => {
+    el.textContent = c.nomeBarbearia;
+  });
+
+  $$('.endereco').forEach(el => {
+    el.textContent = c.endereco;
+  });
+
+  $$('.horario').forEach(el => {
+    el.textContent = c.horario;
+  });
+
+  $$('.instagram').forEach(el => {
+    el.href = c.instagram;
+  });
+
+  $$('.mapsUrl').forEach(el => {
+    el.href = c.mapsUrl;
+  });
+
+  $$('.whatsapp').forEach(el => {
+    el.href = whatsapp('Olá! Gostaria de informações.');
+    el.target = '_blank';
+  });
+
+  const servGrid = $('#servGrid');
+
+  if (servGrid) {
+    servGrid.innerHTML = c.servicos.map(s => `
+      <article class="serv-card">
+        ${s.foto ? `<img src="${s.foto}" alt="${s.nome}" loading="lazy">` : ''}
+        <div class="serv-info">
+          <h3>${s.nome}</h3>
+          <p>${s.desc}</p>
+          <strong>${s.preco}</strong>
+          <a href="${whatsapp('Olá! Gostaria de agendar: ' + s.nome)}" target="_blank">
+            Agendar pelo WhatsApp
+          </a>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  const galGrid = $('#galGrid');
+
+  if (galGrid) {
+    galGrid.innerHTML = c.galeria.map(g => `
+      <article class="gal-card">
+        <img src="${g.foto}" alt="${g.titulo}" loading="lazy">
+        <h3>${g.titulo}</h3>
+      </article>
+    `).join('');
+  }
+
+  const avGrid = $('#avGrid');
+
+  if (avGrid) {
+    avGrid.innerHTML = c.avaliacoes.map(a => `
+      <article class="av-card">
+        <p>"${a.texto}"</p>
+        <strong>${a.nome}</strong>
+      </article>
+    `).join('');
+  }
+
+  const form = $('form');
+
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const dados = new FormData(form);
+      const mensagem = [
+        'Olá! Gostaria de agendar um horário.',
+        ...[...dados.entries()].map(([k, v]) => `${k}: ${v}`)
+      ].join('\n');
+
+      window.open(whatsapp(mensagem), '_blank');
+    });
+  }
+
+  const menuBtn = $('.menu-btn');
+  const nav = $('nav');
+
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  }
+
+  $$('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav?.classList.remove('active');
+    });
+  });
+
+  const reveal = $$('.reveal');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    reveal.forEach(el => observer.observe(el));
+  } else {
+    reveal.forEach(el => el.classList.add('visible'));
+  }
+})();
