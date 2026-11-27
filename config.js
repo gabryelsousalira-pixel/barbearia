@@ -62,10 +62,10 @@ const config = {
   ],
 
   galeria: [
-    {
-      titulo: "Degradê",
-      foto: "https://images.unsplash.com/photo-1582771498000-8ad44e6c84db?auto=format&fit=crop&w=900&q=85"
-    },
+   {
+  titulo: "Degradê",
+  foto: "https://images.unsplash.com/photo-1653875700329-a7c8aca94c95?auto=format&fit=crop&w=900&q=85"
+},
     {
       titulo: "Corte social",
       foto: "https://images.unsplash.com/photo-1741345980740-b59392d7e26d?auto=format&fit=crop&w=900&q=85"
