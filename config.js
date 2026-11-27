@@ -45,7 +45,7 @@ const config = {
       nome: "Degradê",
       preco: "R$ 45",
       desc: "Degradê preciso, com transição suave e acabamento limpo.",
-      foto: "https://images.unsplash.com/photo-1653875700329-a7c8aca94c95?auto=format&fit=crop&w=800&q=85"
+     foto: "https://cdn2.fabbon.com/uploads/image/file/59592/small__image__-_8813056.webp"
     },
     {
       nome: "Sobrancelha",
@@ -62,9 +62,9 @@ const config = {
   ],
 
   galeria: [
-   {
+  {
   titulo: "Degradê",
-  foto: "https://images.unsplash.com/photo-1653875700329-a7c8aca94c95?auto=format&fit=crop&w=900&q=85"
+  foto: "https://cdn2.fabbon.com/uploads/image/file/59592/small__image__-_8813056.webp"
 },
     {
       titulo: "Corte social",
